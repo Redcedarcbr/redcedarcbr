@@ -43,7 +43,22 @@ h1 {
   text-align: center;
 }
 
+/*--index page image --*/
+.intro-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+  padding: 0 10px;
+}
 
+.intro-grid img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+/*-- end --*/
 .container {
     max-width: 1400px;
     margin: 40px auto;
