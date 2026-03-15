@@ -217,6 +217,13 @@ footer {
   margin: auto;
   overflow: hidden;
 }
+.slideshow-container img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
 .intro-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
