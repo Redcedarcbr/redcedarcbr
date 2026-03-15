@@ -27,8 +27,55 @@
     the group has been actively involved in community and cultural events throughout Canberra. Embracing multiculturalism,
     the group uses dance as a universal language to celebrate cultural diversity, promote cross-cultural understanding, and enrich community life. Through high-quality performances, 
     the group is committed to contributing to Canberra’s vibrant and inclusive cultural landscape.</p>
-      <img src="img/per_2.jpg" alt="Red Cedar performance at Sister City Celebration" style="width:100%; border-radius:8px; margin-top:20px;">
-</div>
+ 
+ <div class="slideshow-container">
+   <div class="slide fade">
+    <img src="img/per_1.jpg" alt="Dancer near waterfront">
+   </div>
+  <div class="slide fade">
+    <img src="img/per_2.jpg" alt="Group with fans and banner">
+  </div>
+   <div class="slide fade">
+    <img src="imgs/per_3.jpg" alt="Sunset performance in green dresses">
+  </div>
+    <div class="slide fade">
+    <img src="imgs/per_4.jpg" alt="Sunset performance in green dresses">
+ </div>
+   <div id="slideshow-message" style="display:none; text-align:center; font-weight:bold;     	margin-top:10px;">
+   Our performances   
+  </div>
+
+<script>
+let slideIndex = 0;
+const slides = document.getElementsByClassName("slide");
+const message = document.getElementById("slideshow-message");
+
+function showSlides() {
+  // Hide all slides
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  // If we've reached the end, show message and pause
+  if (slideIndex >= slides.length) {
+    message.style.display = "block";
+    setTimeout(() => {
+      message.style.display = "none";
+      slideIndex = 0;
+      setTimeout(showSlides, 4000); // Wait before restarting slideshow
+    }, 2000); // Show message for 2 seconds
+    return;
+  }
+
+  // Show current slide
+  slides[slideIndex].style.display = "block";
+  slideIndex++;
+  setTimeout(showSlides, 4000); // Show each slide for 4 seconds
+}
+
+showSlides();
+</script>
+
 
 <footer>
     <p>© 2026 Red Cedar Dancing Group</p>
@@ -40,5 +87,6 @@
     </p>
 </footer>
 
-</body>
+
 </html>
+
