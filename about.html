@@ -36,10 +36,10 @@
     <img src="img/per_2.jpg" alt="Group with fans and banner">
   </div>
    <div class="slide fade">
-    <img src="imgs/per_3.jpg" alt="Sunset performance in green dresses">
+    <img src="img/per_3.jpg" alt="Sunset performance in green dresses">
   </div>
     <div class="slide fade">
-    <img src="imgs/per_4.jpg" alt="Sunset performance in green dresses">
+    <img src="img/per_4.jpg" alt="Sunset performance in green dresses">
  </div>
    <div id="slideshow-message" style="display:none; text-align:center; font-weight:bold;     	margin-top:10px;">
    Our performances   
@@ -47,35 +47,66 @@
 
 <script>
 let slideIndex = 0;
+let paused = false;
+let firstLoop = true;
+
 const slides = document.getElementsByClassName("slide");
 const message = document.getElementById("slideshow-message");
+const container = document.querySelector(".slideshow-container");
+
+// Smooth fade-in for the start of the fast loop
+function softStartEffect() {
+  slides[0].classList.add("soft-start");
+  setTimeout(() => slides[0].classList.remove("soft-start"), 1500);
+}
 
 function showSlides() {
+  if (paused) {
+    setTimeout(showSlides, 200);
+    return;
+  }
+
   // Hide all slides
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
 
-  // If we've reached the end, show message and pause
+  // End of loop
   if (slideIndex >= slides.length) {
     message.style.display = "block";
+
     setTimeout(() => {
       message.style.display = "none";
       slideIndex = 0;
-      setTimeout(showSlides, 4000); // Wait before restarting slideshow
-    }, 2000); // Show message for 2 seconds
+
+      // Switch to fast mode after first loop
+      if (firstLoop) {
+        firstLoop = false;
+        softStartEffect(); // fade-in for fast loop
+      }
+
+      // ⭐ Immediately restart — no gap
+      showSlides();
+    }, 2000);
+
     return;
   }
 
   // Show current slide
   slides[slideIndex].style.display = "block";
   slideIndex++;
-  setTimeout(showSlides, 4000); // Show each slide for 4 seconds
+
+  // Timing: slow first loop → fast later
+  const speed = firstLoop ? 4000 : 2000;
+  setTimeout(showSlides, speed);
 }
+
+// Pause on hover
+container.addEventListener("mouseenter", () => paused = true);
+container.addEventListener("mouseleave", () => paused = false);
 
 showSlides();
 </script>
-
 
 <footer>
     <p>© 2026 Red Cedar Dancing Group</p>
