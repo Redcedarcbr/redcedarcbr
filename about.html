@@ -6,118 +6,83 @@
     <title>About Us - Red Cedar Dance Group</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-    <h1>About Us</h1>
-</header>
+    <header>
+        <h1>About Us</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="performances.html">Performances</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="performances.html">Performances</a>
-    <a href="contact.html">Contact</a>
-</nav>
+    <!-- ⭐ SLIDESHOW SECTION ⭐ -->
+    <div class="slideshow-container">
 
-<div class="container">
-    <h2>Our Story</h2>
-    <p>堪培拉红杉树舞蹈团成立于1997年，由一群热爱舞蹈、充满热情与活力的年轻女性组成。自成立以来，舞蹈团始终积极参与堪培拉各类社会与社区活动
-    以舞蹈为媒介，传播艺术之美，致力于为当地社区提供高质量、多元化的文艺演出，丰富社区文化生活。</p>
-    <p>The Canberra Redwoods Dance Group was founded in 1997 and is composed of passionate and dedicated young women who share a strong love for dance. Since its establishmen,
-    the group has been actively involved in community and cultural events throughout Canberra. Embracing multiculturalism,
-    the group uses dance as a universal language to celebrate cultural diversity, promote cross-cultural understanding, and enrich community life. Through high-quality performances, 
-    the group is committed to contributing to Canberra’s vibrant and inclusive cultural landscape.</p>
+        <div class="slide fade">
+            <img src="img/home7.JPG" alt="Dancer near waterfront" class="slide">
+        </div>
 
-<div class="slideshow-container">
-   <div class="slide fade">
-    <img src="img/home7.JPG" alt="Dancer near waterfront">
-   </div>
-  <div class="slide fade">
-    <img src="img/home6.JPG" alt="Group with fans and banner">
-  </div>
-   <div class="slide fade">
-    <img src="img/per_3.JPG" alt="Sunset performance in green dresses">
-  </div>
-    <div class="slide fade">
-    <img src="img/home4.JPG" alt="Sunset performance in green dresses">
-  </div>
-   <div id="slideshow-message" style="display:none; text-align:center; font-weight:bold;     	margin-top:10px;">
-   Our performances   
- </div>
+        <div class="slide fade">
+            <img src="img/home6.JPG" alt="Group with fans and banner" class="slide">
+        </div>
 
-<script>
-let slideIndex = 0;
-let paused = false;
-let firstLoop = true;
+        <div class="slide fade">
+            <img src="img/per_3.JPG" alt="Sunset performance in green dresses" class="slide">
+        </div>
 
-const slides = document.getElementsByClassName("slide");
-const message = document.getElementById("slideshow-message");
-const container = document.querySelector(".slideshow-container");
+        <div class="slide fade">
+            <img src="img/home4.JPG" alt="Sunset performance in green dresses" class="slide">
+        </div>
 
-// Smooth fade-in for the start of the fast loop
-function softStartEffect() {
-  slides[0].classList.add("soft-start");
-  setTimeout(() => slides[0].classList.remove("soft-start"), 1500);
-}
+        <div id="slideshow-message" style="display:none; text-align:center; font-weight:bold; margin-top:10px;">
+            Our performances
+        </div>
+    </div>
 
-function showSlides() {
-  if (paused) {
-    setTimeout(showSlides, 200);
-    return;
-  }
+    <!-- ⭐ ABOUT SECTION ⭐ -->
+    <section class="about-section">
+        <h2>Our Story</h2>
 
-  // Hide all slides
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
+        <p>
+            红杉舞蹈队成立于1997年，由一群热爱舞蹈、充满活力的年轻女性组成。
+            多年来，我们积极参与堪培拉及周边地区的各类社区活动，
+            通过舞蹈传递文化、连接社区、丰富多元文化生活。
+        </p>
 
-  // End of loop
-  if (slideIndex >= slides.length) {
-    message.style.display = "block";
+        <p>
+            The Red Cedar Dancing Group was founded in 1997 by a group of passionate young women who love dance.
+            Since then, we have actively participated in community and cultural events across Canberra,
+            using dance as a universal language to promote multiculturalism, foster understanding,
+            and enrich community life through high-quality performances.
+        </p>
+    </section>
 
-    setTimeout(() => {
-      message.style.display = "none";
-      slideIndex = 0;
+    <!-- ⭐ FOOTER ⭐ -->
+    <footer>
+        <p>© 2026 Red Cedar Dancing Group</p>
+        <p>Licensed under CC BY-NC-ND 4.0</p>
+    </footer>
 
-      // Switch to fast mode after first loop
-      if (firstLoop) {
-        firstLoop = false;
-        softStartEffect(); // fade-in for fast loop
-      }
+    <!-- ⭐ SLIDESHOW SCRIPT ⭐ -->
+    <script>
+        let slideIndex = 0;
+        showSlides();
 
-      // ⭐ Immediately restart — no gap
-      showSlides();
-    }, 2000);
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000);
+        }
+    </script>
 
-    return;
-  }
-
-  // Show current slide
-  slides[slideIndex].style.display = "block";
-  slideIndex++;
-
-  // Timing: slow first loop → fast later
-  const speed = firstLoop ? 4000 : 2000;
-  setTimeout(showSlides, speed);
-}
-
-// Pause on hover
-container.addEventListener("mouseenter", () => paused = true);
-container.addEventListener("mouseleave", () => paused = false);
-
-showSlides();
-</script>
-
-<footer>
-    <p>© 2026 Red Cedar Dancing Group</p>
-    <p>
-        Licensed under 
-        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" style="color:white; text-decoration:underline;">
-            CC BY‑NC‑ND 4.0
-        </a>
-    </p>
-</footer>
-
-
+</body>
 </html>
-
