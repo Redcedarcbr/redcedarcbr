@@ -226,8 +226,8 @@ footer {
 }
 
 .intro-grid img {
-  width: 100%;
-  height: 180px;
+  width: 110%;
+  height: 190px;
   object-fit: cover;
   border-radius: 8px;
 }
