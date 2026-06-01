@@ -39,6 +39,39 @@ nav a {
 nav a:hover {
     background: #8B0000;
 }
+.side-menu {
+  width: 200px;
+  position: fixed;
+  top: 180px; /* adjust if your header height changes */
+  left: 0;
+  padding: 20px;
+  background: #f7f7f7;
+  border-right: 1px solid #ddd;
+  height: calc(100% - 80px);
+}
+
+.side-menu a {
+  display: block;
+  padding: 10px 0;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.side-menu a:hover {
+  color: #b30000;
+}
+.side-menu h3 {
+  background: #8B0000;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.page-content {
+  margin-left: 260px;
+  padding: 20px;
+}
 h1 {
   text-align: center;
 }
