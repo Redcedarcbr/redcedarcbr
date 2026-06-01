@@ -68,6 +68,40 @@ nav a:hover {
   border-radius: 4px;
 }
 
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Main dropdown button */
+.dropbtn {
+    padding: 14px 16px;
+    display: inline-block;
+}
+/* Dropdown menu (hidden by default) For the performances link*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+    color: #333;
+    padding: 10px 14px;
+    text-decoration:  #ffffff;
+    display: block;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 .page-content {
   margin-left: 260px;
   padding: 20px;
