@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multicultural Festival Performances - Red Cedar Dance Group</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Collapsible styling */
+        .year-section {
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .year-header {
+            background-color: #8B0000;
+            color: white;
+            padding: 12px 16px;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .year-content {
+            display: none;
+            padding: 15px 20px;
+            background: #fafafa;
+            line-height: 1.6;
+        }
+
+        .year-content p {
+            margin: 8px 0;
+        }
+    </style>
+
+    <script>
+        function toggleYear(id) {
+            const content = document.getElementById(id);
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Red Cedar Dance Group</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="performances.html">Performances</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-title" style="background:#8B0000; color:white; padding:10px 20px; text-align:center;">
+        <h2>Multicultural Festival Performances</h2>
+        <p>多元文化节历年演出</p>
+    </section>
+
+    <main style="max-width:900px; margin:auto; padding:20px;">
+
+        <!-- 2026 Section -->
+        <div class="year-section">
+            <div class="year-header" onclick="toggleYear('y2026')">
+                ▶ 2026 Performances / 2026年演出
+            </div>
+            <div class="year-content" id="y2026">
+                <p>• Invited by Australia China Economic and Cultural Promotions Inc.</p>
+                <p>• Performed: <em>"Caiwei” , "Raise the Dragon King"</em></p>
+                <p>• 表演曲目：<em>汉唐古典舞“采薇”、海阳秧歌“抬龙王”</em></p>
+                <p>• 受澳中经济文化促进会邀请</p>
+                <!-- <p>— Video / Photo available</p> -->
+            </div>
+        </div>
+         <!-- 2025 Section -->
+        <div class="year-section">
+            <div class="year-header" onclick="toggleYear('y2025')">
+                ▶ 2025 Performances / 2025年演出
+            </div>
+            <div class="year-content" id="y2025">
+                 <p>• Performed: <em>"Chang'an Beauty”</em></p>
+                <p>• 表演曲目：<em>“长安仕女”</em></p>
+                <!-- <p>— Video / Photo available</p> -->
+            </div>
+        </div>
+          <!-- 2024 Section -->
+        <div class="year-section">
+            <div class="year-header" onclick="toggleYear('y2024')">
+                ▶ 2024 Performances / 2024年演出
+            </div>
+            <div class="year-content" id="y2024">
+                <p>• Guangxi Friendship Association Inc. and
+                     Australian China Economic & Culture Promotion Association..</p>
+                <p>• Performed: <em>"1: Chinese Water-ink Painting", "2. Tibetan Dance "Road to the Sky”, "3. "Bloom in Time" </em></p>
+                <p>• 表演曲目：<em>"水墨丹青","藏族舞“天路”,江南伞舞“人间烟火”</em></p>
+                <!-- <p>— Video / Photo available</p> -->
+            </div>
+        </div>
+          <!-- 2023 Section -->
+        <div class="year-section">
+            <div class="year-header" onclick="toggleYear('y2023')">
+                ▶ 2023 Performances / 2024年演出
+            </div>
+            <div class="year-content" id="y2023">
+            <p>• Performed: <em>"1: Chinese Water/ink Painting", "2. China in the Light” </em></p>
+                <p>• 表演曲目：<em>"水墨丹青","灯火里的中国”</em></p>
+                <!-- <p>— Video / Photo available</p> -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Red Cedar Dance Group</p>
+    </footer>
+
+</body>
+</html>
