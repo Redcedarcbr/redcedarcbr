@@ -24,15 +24,17 @@ header {
 }
 /* Mob view
 nav {
+    background: #333;
     display: flex;
     justify-content: center;
     gap: 20px;
 }
+/* Mob view
 nav {
     background: #333;
     display: flex;
     justify-content: center;
-}
+} */
 
 nav a {
     color: white;
