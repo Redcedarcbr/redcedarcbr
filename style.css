@@ -22,7 +22,12 @@ header {
     padding: 20px 0;
     text-align: center;
 }
-
+/* Mob view
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
 nav {
     background: #333;
     display: flex;
