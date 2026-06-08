@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO tags (correct placement) -->
+    <meta name="keywords" content="红杉树舞蹈团, Red Cedar Dance Group, 堪培拉舞蹈, 中国舞, 舞蹈表演, 农历新年表演">
+    <meta name="keywords" content="Red Cedar Dance Group, Canberra dance, Chinese dance, Lunar New Year, cultural performances">
+   <meta name="author" content="Red Cedar Dance Group">
+   <meta name="robots" content="index, follow">
+    <title>Floriade Concert Performances - Red Cedar Dance Group</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Collapsible styling */
+        .year-section {
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .year-header {
+            background-color: #8B0000;
+            color: white;
+            padding: 12px 16px;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .year-content {
+            display: none;
+            padding: 15px 20px;
+            background: #fafafa;
+            line-height: 1.6;
+        }
+
+        .year-content p {
+            margin: 8px 0;
+        }
+    </style>
+
+    <script>
+        function toggleYear(id) {
+            const content = document.getElementById(id);
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</head>
+
+<body>
+
+ <!-- Header -->
+<header>
+     <h1>Red Cedar Dance Group 红杉树青年舞蹈团</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+
+        <!-- Dropdown for Performances -->
+        <div class="dropdown">
+            <a href="performances.html" class="dropbtn">Performances ▾</a>
+            <div class="dropdown-content">
+                <a href="multicultural.html">Multicultural Festivals</a>
+                <a href="luneryear.html">New Year Celebration</a>
+               <!-- <a href="floriade.html">floriade Concert Events</a> -->
+               <!-- <a href="moon.html">Moon Festival</a>
+                <a href="other.html">Other Events</a> -->
+            </div>
+        </div>
+
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+
+    <!-- Page Title -->
+    <section class="page-title" style="background:#8B0000; color:white; padding:10px 20px; text-align:center;">
+        <h2>Floriade Concert Performances</h2>
+        <p>花展演出</p>
+    </section>
+
+    <main style="max-width:900px; margin:auto; padding:20px;">
+
+        <!-- 2025 Section -->
+        <div class="year-section">
+            <div class="year-header" onclick="toggleYear('y2025')">
+                ▶ 2025 Performances / 2025年演出
+            </div>
+            <div class="year-content" id="y2025">
+                <p>• Invited by (ACCEPA)</p>
+                <p>• Performed: <em>"Raise the Dragon King"</em></p>
+ 		<p>• 受中华文化协会邀约</p>
+                <p>• 表演曲目：<em>海阳秧歌 “抬龙王”</em></p>
+               
+                <!-- <p>— Video / Photo available</p> -->
+            </div>
+        </div>
+         <!-- 2024 Section -->
+        <div class="year-section">
+            <div class="year-header" onclick="toggleYear('y2024')">
+                ▶ 2024 Performances / 2024年演出
+            </div>
+            <div class="year-content" id="y2024">
+                 <p>• Invited by (ACCEPA)</p>
+                 <p>• Performed: <em>"Chang'an Beauty”</em></p>
+                 <p>• 受中华文化协会邀约</p>
+                <p>• 表演曲目：<em>“长安仕女”</em></p>
+                <!-- <p>— Video / Photo available</p> -->
+            </div>
+        </div>
+          <!-- 2023 Section -->
+        <div class="year-section">
+            <div class="year-header" onclick="toggleYear('y2023')">
+                ▶ 2023 Performances / 2023年演出
+            </div>
+            <div class="year-content" id="y2023">
+                <p>• Invited by (ACCEPA)</p>
+                <p>• Performed: <em>Chinese Umbrella Dance "Bloom in Time" </em></p>
+                <p>• 受中华文化协会邀约</p>
+                <p>• 表演曲目：<em>江南伞舞“人间烟火”</em></p>
+                <!-- <p>— Video / Photo available</p> -->
+            </div>
+        </div>
+          <!-- 2022 Section -->
+        <div class="year-section">
+            <div class="year-header" onclick="toggleYear('y2022')">
+                ▶ 2022 Performances / 2022年演出
+            </div>
+            <div class="year-content" id="y2022">
+            <p>• Invited by (ACCEPA)</p>
+            <p>• Performed: <em>"Maiden's Love" </em></p>
+	    <p>• 受中华文化协会邀约</p>
+            <p>• 表演曲目：<em>表演古典舞“女儿情”</em></p>
+            <!-- <p>— Video / Photo available</p> -->
+            </div>
+        </div>
+          <!-- 2016 Section -->
+        <div class="year-section">
+            <div class="year-header" onclick="toggleYear('y2016')">
+                ▶ 2016 Performances / 2016年演出
+            </div>
+            <div class="year-content" id="y2016">
+            <p>• Invited by (ACCEPA)</p>
+            <p>• Performed: <em>1: Group Fan Dance "Spring Ballet", 2. Classical Qipao dance "Lady Flower"</em></p>
+            <p>• 受中华文化协会邀约</p>
+            <p>• 表演曲目：<em>1: 表演古典舞“女儿情”, 2. 旗袍舞“女人花”</em></p>
+            <!-- <p>— Video / Photo available</p> -->
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Red Cedar Dance Group</p>
+    </footer>
+
+</body>
+</html>
