@@ -112,7 +112,13 @@ h1 {
 h2 {
   text-align: center;
 }
-
+/* --- YF page Card Image --- */
+.center-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 400px;
+  height: auto;
+}
 
 
 .container {
