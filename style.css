@@ -119,6 +119,7 @@ h2 {
   max-width: 400px;
   height: auto;
 }
+
 .performance-block {
   background: #f7f7f7;
   padding: 20px;
@@ -131,6 +132,19 @@ h2 {
   margin-top: 0;
   color: #b30000;
   font-weight: 600;
+}
+.yafen-photo-row {
+  display: flex;
+  gap: 20px; /* space between the two images */
+  justify-content: center; /* center them nicely */
+  align-items: center;
+  margin: 20px 0;
+}
+
+.profile-photo {
+  width: 45%; /* adjust as needed */
+  height: auto;
+  border-radius: 6px; /* optional: makes edges softer */
 }
 
 /* --- End of YF page ---*/
@@ -411,7 +425,6 @@ footer {
   from {opacity: 0.4}
   to {opacity: 1}
 }
-
 
 
 
